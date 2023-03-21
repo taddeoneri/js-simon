@@ -6,12 +6,13 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
 
 let numbers = [];
+const NUM = 5;
 const flashNumbers = document.getElementById('numbers');
 const memory = document.getElementById('memory');
 const result = document.getElementById('result');
 const button = document.querySelector('button');
 
-while(numbers.length < 5){
+while(numbers.length < NUM){
     const number = getRandomInt(1, 100);
     if(!numbers.includes(number)){
         numbers.push(number);
@@ -25,9 +26,11 @@ while(numbers.length < 5){
 const myTimeout = setTimeout(function(){
     flashNumbers.classList.add('d-none');
     result.classList.remove('d-none')
-}, 3000);
+}, 30000);
+
 
 button.addEventListener('click', resultNumber);
+
 
 function resultNumber(){
     const resultNumber1 = parseInt(document.getElementById('number1').value);
