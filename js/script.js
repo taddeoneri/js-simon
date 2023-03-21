@@ -9,7 +9,7 @@ let numbers = [];
 const NUM = 5;
 const flashNumbers = document.getElementById('numbers');
 const memory = document.getElementById('memory');
-const result = document.getElementById('result');
+const resultDiv = document.getElementById('result');
 const button = document.querySelector('button');
 
 while(numbers.length < NUM){
@@ -25,27 +25,21 @@ while(numbers.length < NUM){
 
 const myTimeout = setTimeout(function(){
     flashNumbers.classList.add('d-none');
-    result.classList.remove('d-none')
-}, 30000);
+    resultDiv.classList.remove('d-none')
+}, 3000);
 
 
 button.addEventListener('click', resultNumber);
 
 
 function resultNumber(){
-    const resultNumber1 = parseInt(document.getElementById('number1').value);
-    const resultNumber2 = parseInt(document.getElementById('number2').value);
-    const resultNumber3 = parseInt(document.getElementById('number3').value);
-    const resultNumber4 = parseInt(document.getElementById('number4').value);
-    const resultNumber5 = parseInt(document.getElementById('number5').value);
+    const result = document.querySelectorAll('input');
     let array = [];
     let score = 0;
     const par = document.querySelector('.score');
-    array.push(resultNumber1);
-    array.push(resultNumber2);
-    array.push(resultNumber3);
-    array.push(resultNumber4);
-    array.push(resultNumber5);
+    for(let i = 0; i < result.length; i++){
+        array.push(parseInt(result[i].value));
+    }
     for(let i = 0; i < numbers.length; i++){
         for(let j = 0; j < array.length; j++){
             if(array[j] === (numbers[i])){
