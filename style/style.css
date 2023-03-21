@@ -1,0 +1,20 @@
+.container{
+   max-width: 800px;
+   margin: 20px auto;
+}
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+}
+#memory{
+    padding: 30px 0px;
+}
+#numbers h1{
+    text-align: center;
+}
+.number{
+    font-size: 2rem;
+}
+.d-none{
+    display: none;
+}
