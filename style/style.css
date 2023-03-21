@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container{
    max-width: 800px;
    margin: 20px auto;
@@ -5,6 +10,14 @@
 .d-flex{
     display: flex;
     justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.d-none{
+    display: none;
 }
 #memory{
     padding: 30px 0px;
@@ -15,6 +28,19 @@
 .number{
     font-size: 2rem;
 }
-.d-none{
-    display: none;
+#result h1{
+    text-align: center;
+    padding: 30px 0px;
+}
+.inputNumber input{
+    width: 60px;
+    height: 55px;
+    text-align: center;
+    font-size: 2rem;
+}
+button{
+    margin: 30px 0px;
+}
+h4{
+    font-size: 1.5rem;
 }
